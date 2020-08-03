@@ -1,0 +1,104 @@
+body{
+    background-color: black;
+    background-image: url("https://ae01.alicdn.com/kf/Hde20f4cc3fcc4c21b6aabd7418485700w.jpg");
+}
+.search{
+  border-radius: 50px;
+  height: 40px;
+  width: 200px;
+  position: absolute;
+  left: 580px;
+  top:350px;
+  background-color: white;
+}
+  /*滚动条样式*/
+  .songlist::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+}
+.songlist::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: black;
+}
+.songlist::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: black;
+}
+
+
+.songlist{
+    position: absolute;
+    left: 850px;
+    top:200px;
+    width: 300px;
+    height: 450px;
+    border: 1px white solid;
+    border-radius: 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+ 
+}
+
+.songindex{
+    position: absolute;
+    left: 850px;
+    top:200px;
+    width: 500px;
+    height: 450px;
+    border: 1px white solid;
+    border-radius: 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+    white-space: pre-line;
+    letter-spacing: 3px;
+    line-height: 50px;
+}
+    
+
+
+
+
+
+
+.song{
+margin: auto;
+margin-top: 15px;
+width: 200px;
+border-right: none;
+border-left: none;
+border-bottom:1px white solid;
+padding: 10px;
+color: white;
+text-align: left; 
+
+}
+.audio{
+    margin: auto;
+width: 250px;
+border: 1px white solid;
+border-radius: 40px;
+
+}
+
+.lrc{
+margin:auto;
+text-align: center;
+color: white;
+
+}
+.back{
+width: 25px;
+height: 25px;
+border-radius: 50%;
+text-align: center;
+border: 1px white solid;
+color:white;
+font-size: 20px;
+position: fixed;
+left: 800px;
+bottom: 200px;
+
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="music.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+
+
+
+
+<div id="app">
+<div class="search" >
+    <input type="text" placeholder="输入歌曲or歌手" v-model="sname" @keyup.enter="Search" style="position: absolute;  left: 20px; top:10px;  border: none;">
+</div>
+
+<!--歌曲菜单-->
+<div class="songlist"  v-show="show">
+
+<div class="song" v-for="item in list"  @click="play(item.id)" >
+    {{item.name}} ———  {{item.artists[0].name}}
+  
+</div>
+</div>
+
+   <!--歌曲主页面-->
+   <div class="songindex" v-show="!show" >
+     
+    <audio v-bind:src="songsrc" controls style="position: absolute;top: 15px;left:60px;width: 400px;"></audio>
+
+    <div class="lrc">
+        {{lrc}}
+    </div>
+        </div>
+        <!--back按钮-->
+        <div class="back"  @click="change">B</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+<!--vue-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<!--axios接口-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="music.js"></script>
+</html>
